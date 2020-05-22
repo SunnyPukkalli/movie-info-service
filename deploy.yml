@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-info
+  labels:
+    app: movie-info
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-info
+  template:
+    metadata:
+      labels:
+        app: movie-info
+    spec:
+      containers:
+      - name: movie-info
+        image: 'gcr.io/favorable-iris-266409/movie-info:v1'
+        ports:
+        - containerPort: 8080
