@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: movie-info
+  name: movie-info-service
   labels:
-    name: movie-info
+    name: movie-info-service
 spec:
   ports:
     - port: 80
