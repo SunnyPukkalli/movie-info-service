@@ -3,6 +3,8 @@ package com.ms.movieinfoservice.resource;
 
 import com.ms.movieinfoservice.model.Movie;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,17 +17,21 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/movies/")
 public class MovieResource {
 
+    Logger logger = LoggerFactory.getLogger(MovieResource.class);
+
     @Autowired
     private RestTemplate restTemplate;
 
     @GetMapping("{movieId}")
     public Movie getMovieInfo(@PathVariable("movieId") Integer movieId){
 
-        // return Random Movie Details
-        String movieName = RandomStringUtils.randomAlphabetic(5);
-        String description = RandomStringUtils.randomAlphabetic(10);
+        logger.info("Input Movie Id is :"+movieId);
 
-        return new Movie(movieId,movieName,description);
+        // return Random Movie Details
+        Movie movie = new Movie(movieId,RandomStringUtils.randomAlphabetic(5),RandomStringUtils.randomAlphabetic(10)) ;
+        logger.info("Returning Movie with Details :"+movie);
+
+        return movie;
     }
 
 }
