@@ -20,5 +20,15 @@ spec:
         env:
         - name: PROFILE
           value: cloud
+        - name: api.key
+          valueFrom:
+            configMapKeyRef:
+              name: movie-db
+              value: api.key
+        - name: api.url
+          valueFrom:
+            configMapKeyRef:
+              name: movie-db
+              value: api.url
         ports:
         - containerPort: 8080
