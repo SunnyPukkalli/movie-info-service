@@ -19,3 +19,10 @@
 |API                        |Description                        |
 |---------------------------|-----------------------------------|
 |**`/movies/{movieId}`**    |will return Movie with random data |
+
+
+## API Exposed for image version : https
+|API                        |Description                        |
+|---------------------------|-----------------------------------|
+|**`/movies/v1/{movieId}`**    |will return Movie with random data |
+|**`/movies/v2/{movieId}`**    |will fetch data from external API and use configmap |
