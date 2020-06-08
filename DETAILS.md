@@ -21,7 +21,7 @@
 |**`/movies/{movieId}`**    |will return Movie with random data |
 
 
-## API Exposed for image version : https
+## API Exposed for image version : e2
 |API                        |Description                        |
 |---------------------------|-----------------------------------|
 |**`/movies/v1/{movieId}`**    |will return Movie with random data |
