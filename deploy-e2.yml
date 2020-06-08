@@ -24,11 +24,11 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: movie-db
-              value: api.key
+              key: api.key
         - name: api.url
           valueFrom:
             configMapKeyRef:
               name: movie-db
-              value: api.url
+              key: api.url
         ports:
         - containerPort: 8080
