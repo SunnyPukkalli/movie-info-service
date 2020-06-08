@@ -72,13 +72,7 @@ public class MovieResource {
 
     private String createExternalURL(Integer movieId) {
         logger.info("EXTERNAL_API_URL is :- "+EXTERNAL_API_URL +" and API_KEY is :- "+API_KEY);
-
-        if(EXTERNAL_API_URL.contains("https")){
-            return EXTERNAL_API_URL+movieId+"?api_key="+API_KEY;
-        }else if(EXTERNAL_API_URL.contains("http")){
-            return EXTERNAL_API_URL+API_KEY;
-        }
-        return null;
+        return EXTERNAL_API_URL+API_KEY;
     }
 
 }
