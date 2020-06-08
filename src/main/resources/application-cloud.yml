@@ -1,3 +1,7 @@
+api:
+  key:
+  url:
+
 server:
   port: 8080
 
