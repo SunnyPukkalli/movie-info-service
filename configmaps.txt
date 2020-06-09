@@ -6,3 +6,8 @@ HTTPS:  kubectl create configmap movie-db --from-literal=api_url=https://api.the
 // https://run.mocky.io/v3/d5c46d37-420d-4bdc-b62a-2846b83d4bcd
 
 HTTP:   kubectl create configmap movie-db --from-literal=api_url=https://run.mocky.io/v3/ --from-literal=api_key=d5c46d37-420d-4bdc-b62a-2846b83d4bcd
+
+
+// http://http-mock.mocklab.io/v2/1234567890
+// https://http-mock.mocklab.io/v2/1234567890
+kubectl create configmap movie-db --from-literal=api_url=http://http-mock.mocklab.io/v2/ --from-literal=api_key=1234567890
