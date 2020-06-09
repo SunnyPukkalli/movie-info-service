@@ -1,6 +1,5 @@
-api:
-  key:
-  url:
+api_key:
+api_url:
 
 server:
   port: 8080

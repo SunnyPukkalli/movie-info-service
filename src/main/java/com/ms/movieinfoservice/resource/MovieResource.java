@@ -37,10 +37,10 @@ public class MovieResource {
         return movie;
     }
 
-    @Value("${api.key:default}")
+    @Value("${api_key:default}")
     private String API_KEY ;
 
-    @Value("${api.url:default}")
+    @Value("${api_url:default}")
     private String EXTERNAL_API_URL ;
 
     private RestTemplate externalRestTemplate;

@@ -1,8 +1,8 @@
 Create configmap using command
 
 - Using literal :
-HTTPS:  kubectl create configmap movie-db --from-literal=api.url=https://api.themoviedb.org/3/movie/ --from-literal=api.key=a058387e5d5195694881c64ab474bc74
+HTTPS:  kubectl create configmap movie-db --from-literal=api_url=https://api.themoviedb.org/3/movie/ --from-literal=api_key=a058387e5d5195694881c64ab474bc74
 
 // https://run.mocky.io/v3/d5c46d37-420d-4bdc-b62a-2846b83d4bcd
 
-HTTP:   kubectl create configmap movie-db --from-literal=api.url=https://run.mocky.io/v3/ --from-literal=api.key=d5c46d37-420d-4bdc-b62a-2846b83d4bcd
+HTTP:   kubectl create configmap movie-db --from-literal=api_url=https://run.mocky.io/v3/ --from-literal=api_key=d5c46d37-420d-4bdc-b62a-2846b83d4bcd
