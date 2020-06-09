@@ -21,14 +21,8 @@ spec:
         - name: PROFILE
           value: cloud
         - name: api_key
-          valueFrom:
-            configMapKeyRef:
-              name: movie-db
-              key: api_key
+          value: '1234567890'
         - name: api_url
-          valueFrom:
-            configMapKeyRef:
-              name: movie-db
-              key: api_url
+          value: http://http-mock.mocklab.io/v2/
         ports:
         - containerPort: 8080
